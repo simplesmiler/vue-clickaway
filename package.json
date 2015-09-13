@@ -1,0 +1,37 @@
+{
+  "name": "vue-clickaway",
+  "description": "Reusable clickaway directive for reusable Vue.js components",
+  "version": "0.1.0",
+  "author": "Denis Karabaza <denis.karabaza@gmail.com>",
+  "browserify": {
+    "transform": [
+      "envify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/simplesmiler/vue-clickaway/issues"
+  },
+  "dependencies": {
+    "envify": "^3.4.0",
+    "vue": "^0.12.9"
+  },
+  "homepage": "https://github.com/simplesmiler/vue-clickaway",
+  "keywords": [
+    "click",
+    "clickaway",
+    "reusable",
+    "vue",
+    "vue-directive",
+    "vuejs"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simplesmiler/vue-clickaway"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
