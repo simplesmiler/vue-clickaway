@@ -31,7 +31,7 @@
     "url": "https://github.com/simplesmiler/vue-clickaway"
   },
   "scripts": {
-    "lint": "eslint index.js",
+    "lint": "eslint index.js directive.js mixin.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
