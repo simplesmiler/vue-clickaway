@@ -49,4 +49,4 @@ module.exports = {
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
