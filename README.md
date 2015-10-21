@@ -1,6 +1,6 @@
 # vue-clickaway
 
-> Reusable clickaway directive for reusable [Vue.js](https://github.com/yyx990803/vue) components
+> Reusable clickaway directive for reusable [Vue.js](https://github.com/vuejs/vue) components
 
 ## Requirements
 
