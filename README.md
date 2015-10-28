@@ -4,13 +4,14 @@
 
 ## Requirements
 
-- vue: ^0.12.9
+- vue: ^1.0.0 or ^0.12.9
 - browserify or webpack
 
 ## Install
 
 ``` sh
 $ npm install vue-clickaway --save
+$ npm install vue-clickaway@0.1 --save # for vue ^0.12.9
 ```
 
 ## Usage

@@ -1,7 +1,7 @@
 {
   "name": "vue-clickaway",
   "description": "Reusable clickaway directive for reusable Vue.js components",
-  "version": "0.1.1",
+  "version": "1.0.0-rc.1",
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
     "transform": [
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "envify": "^3.4.0",
-    "vue": "^0.12.9"
+    "vue": "^1.0.0"
   },
   "homepage": "https://github.com/simplesmiler/vue-clickaway",
   "keywords": [
