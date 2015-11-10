@@ -1,3 +1,8 @@
+## 1.0.0 - 2015-11-11
+
+### Changed
+- Improved docs
+
 ## 1.0.0-rc.1 - 2015-10-28
 
 ### Changed
