@@ -1,7 +1,7 @@
 var _ = require('vue').util;
 
 // @NOTE: written with regard to `v-on`
-// @REFERENCE: https://github.com/yyx990803/vue/blob/0.12.14/src/directives/on.js
+// @REFERENCE: https://github.com/vuejs/vue/blob/1.0.0/src/directives/public/on.js
 
 module.exports = {
 
@@ -12,8 +12,9 @@ module.exports = {
     if (typeof handler !== 'function') {
       if (process.env.NODE_ENV !== 'production') {
         _.warn(
-          'Directive ' + this.name + '="' + this.expression + '" ' +
-          'expects a function value, got ' + handler
+          this.name + '="' +
+          this.expression + '" expects a function value, ' +
+          'got ' + handler
         );
       }
       return;
@@ -22,16 +23,15 @@ module.exports = {
     this.reset();
 
     var self = this;
-    var vm = this.vm;
+    var scope = this._scope || this.vm;
 
     this.handler = function(ev) {
       // @NOTE: IE 5.0+
       // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
       if (!self.el.contains(ev.target)) {
-        ev.targetVM = vm;
-        vm.$event = ev;
+        scope.$event = ev;
         var res = handler(ev);
-        vm.$event = null;
+        scope.$event = null;
         return res;
       }
     };
