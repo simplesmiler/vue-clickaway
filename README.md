@@ -16,35 +16,43 @@ $ npm install vue-clickaway@0.1 --save # for vue ^0.12.9
 
 ## Usage
 
-As an asset:
+1. Make directive available to your component
+2. Define a method to be called
+3. Use the directive in the template
 
-``` js
-var onClickaway = require('vue-clickaway/directive');
-
-module.exports = {
-  // use the declared directive in the template
-  template: '<p v-on-clickaway="away">Click away</p>',
-  methods: {
-    // define a method to be called
-    away: function() {
-      console.log('clicked away');
-    },
-  },
-  directives: {
-    // declare directive as an asset
-    onClickaway: onClickaway,
-  },
-};
-```
-
-As a mixin:
+The recommended way is to use mixin:
 
 ``` js
 var onClickaway = require('vue-clickaway/mixin');
 
 module.exports = {
-  // now directive `v-on-clickaway` is available to use in the template
   mixins: [onClickaway],
+  template: '<p v-on-clickaway="away">Click away</p>',
+  methods: {
+    away: function() {
+      console.log('clicked away');
+    },
+  },
+};
+```
+
+If mixin does not suit your needs, you can use the directive directly:
+
+> NOTE: Pay attention to the letter case. `onClickaway` turns into `v-on-clickaway`, while `onClickAway` turns into `v-on-click-away`.
+
+``` js
+var onClickaway = require('vue-clickaway/directive');
+
+module.exports = {
+  directives: {
+    onClickaway: onClickaway,
+  },
+  template: '<p v-on-clickaway="away">Click away</p>',
+  methods: {
+    away: function() {
+      console.log('clicked away');
+    },
+  },
 };
 ```
 
