@@ -1,3 +1,9 @@
+## [1.0.1] - 2015-12-17
+
+### Changed
+- Improved docs
+- Lint script does not require globally installed eslint anymore
+
 ## 1.0.0 - 2015-11-11
 
 ### Changed
@@ -18,3 +24,4 @@
 Initial release
 
 [0.1.1]: https://github.com/simplesmiler/vue-clickaway/compare/0.1.0...0.1.1
+[1.0.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.0...1.0.1
