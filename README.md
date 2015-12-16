@@ -2,16 +2,21 @@
 
 > Reusable clickaway directive for reusable [Vue.js](https://github.com/vuejs/vue) components
 
+## Overview
+
+Sometimes you need to detect clicks **outside** of the element (to close a modal
+window or hide a dropdown select). There is no native event for that, and Vue.js
+does not cover you either. This is why `vue-clickaway` exists.
+
 ## Requirements
 
-- vue: ^1.0.0 or ^0.12.9
+- vue: ^1.0.0
 - browserify or webpack
 
 ## Install
 
 ``` sh
 $ npm install vue-clickaway --save
-$ npm install vue-clickaway@0.1 --save # for vue ^0.12.9
 ```
 
 ## Usage
@@ -65,6 +70,8 @@ module.exports = {
    application-wide, you should `Vue.directive('on-clickaway', onClickaway);`
    in your application entry point. But bear in mind that this introduces
    implicit dependency for your components, making them less reusable.
+3. A version for `vue@^0.12.9` is not supported, but is availabale as
+   `vue-clickaway@0.1`.
 
 ## License
 
