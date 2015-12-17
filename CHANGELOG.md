@@ -1,3 +1,8 @@
+## [1.1.1] - 2015-12-17
+
+### Fixed
+- CDN link
+
 ## [1.1.0] - 2015-12-17
 
 ### Changed
@@ -34,3 +39,4 @@ Initial release
 [0.1.1]: https://github.com/simplesmiler/vue-clickaway/compare/0.1.0...0.1.1
 [1.0.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.0...1.0.1
 [1.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.1...1.1.0
+[1.1.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.0...1.1.1
