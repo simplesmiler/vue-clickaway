@@ -16,7 +16,11 @@
     "vue": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "^1.10.3",
+    "mkdirp": "^0.5.1",
+    "rollup": "^0.21.2",
+    "rollup-plugin-replace": "^1.1.0",
+    "uglify-js": "^2.6.1"
   },
   "homepage": "https://github.com/simplesmiler/vue-clickaway",
   "keywords": [
@@ -28,13 +32,13 @@
     "vuejs"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/vue-clickaway.common.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/simplesmiler/vue-clickaway"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js",
+    "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

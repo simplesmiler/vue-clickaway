@@ -1,7 +1,51 @@
-var directive = require('./directive');
-var mixin = require('./mixin');
+import { util } from 'vue';
 
-module.exports = {
-  directive: directive,
-  mixin: mixin,
+export var directive = {
+
+  acceptStatement: true,
+  priority: 700,
+
+  update: function(handler) {
+    if (typeof handler !== 'function') {
+      if (process.env.NODE_ENV !== 'production') {
+        util.warn(
+          this.name + '="' +
+          this.expression + '" expects a function value, ' +
+          'got ' + handler
+        );
+      }
+      return;
+    }
+
+    this.reset();
+
+    var self = this;
+    var scope = this._scope || this.vm;
+
+    this.handler = function(ev) {
+      // @NOTE: IE 5.0+
+      // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
+      if (!self.el.contains(ev.target)) {
+        scope.$event = ev;
+        var res = handler(ev);
+        scope.$event = null;
+        return res;
+      }
+    };
+
+    util.on(document.documentElement, 'click', this.handler);
+  },
+
+  reset: function() {
+    util.off(document.documentElement, 'click', this.handler);
+  },
+
+  unbind: function() {
+    this.reset();
+  },
+
+};
+
+export var mixin = {
+  directives: { onClickaway: directive },
 };

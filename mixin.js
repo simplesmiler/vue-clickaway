@@ -1,7 +1,2 @@
-var onClickawayDirective = require('./directive');
-
-module.exports = {
-  directives: {
-    onClickaway: onClickawayDirective,
-  },
-};
+// @DEPRECATED: this usage pattern is deprecated in favor of es6 modules
+module.exports = require('./dist/vue-clickaway.common.js').mixin;

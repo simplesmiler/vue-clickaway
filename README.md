@@ -6,17 +6,27 @@
 
 Sometimes you need to detect clicks **outside** of the element (to close a modal
 window or hide a dropdown select). There is no native event for that, and Vue.js
-does not cover you either. This is why `vue-clickaway` exists.
+does not cover you either. This is why `vue-clickaway` exists. Please check out
+the [demo](https://jsfiddle.net/simplesmiler/bbbh5bt6/) before reading further.
 
 ## Requirements
 
 - vue: ^1.0.0
-- browserify or webpack
 
 ## Install
 
+From npm:
+
 ``` sh
 $ npm install vue-clickaway --save
+```
+
+From CDN:
+
+``` html
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/1.0/dist/vue-clickaway.js"></script>
+<!-- OR -->
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/1.0/dist/vue-clickaway.min.js"></script>
 ```
 
 ## Usage
@@ -28,10 +38,10 @@ $ npm install vue-clickaway --save
 The recommended way is to use the mixin:
 
 ``` js
-var onClickaway = require('vue-clickaway/mixin');
+import { mixin as clickaway } from 'vue-clickaway';
 
-module.exports = {
-  mixins: [onClickaway],
+export default {
+  mixins: [ clickaway ],
   template: '<p v-on-clickaway="away">Click away</p>',
   methods: {
     away: function() {
@@ -44,9 +54,9 @@ module.exports = {
 If mixin does not suit your needs, you can use the directive directly:
 
 ``` js
-var onClickaway = require('vue-clickaway/directive');
+import { directive as onClickaway } from 'vue-clickaway';
 
-module.exports = {
+export default {
   directives: {
     onClickaway: onClickaway,
   },
@@ -59,19 +69,25 @@ module.exports = {
 };
 ```
 
+## Notes
+
+1. `require('vue-clickaway/mixin')` was the recommended syntax prior to `1.1.0`.
+   Although this syntax is still supported, it is recommended to use `import`
+   syntax for es6 and `require('vue-clickaway').mixin` for common-js.
+2. A version for `vue@^0.12.9` is not supported, but is availabale as
+   `vue-clickaway@0.1`.
+
 ## Caveats
 
 1. Pay attention to the letter case. `onClickaway` turns into `v-on-clickaway`,
    while `onClickAway` turns into `v-on-click-away`.
-2. Before vue 1.0 views were able to inherit assets from the parent views,
+2. Prior to `vue@1.0` views were able to inherit assets from the parent views,
    which made it possible to define the directive on the root view
    and have it available across the whole view hierarchy.
-   Since 1.0 this is not possible. If you still want to define the directive
+   Since `vue@1.0` this is not possible. If you still want to define the directive
    application-wide, you should `Vue.directive('on-clickaway', onClickaway);`
    in your application entry point. But bear in mind that this introduces
    implicit dependency for your components, making them less reusable.
-3. A version for `vue@^0.12.9` is not supported, but is availabale as
-   `vue-clickaway@0.1`.
 
 ## License
 
