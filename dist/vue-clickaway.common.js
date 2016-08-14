@@ -21,13 +21,13 @@ var directive = {
 
     this.reset();
 
-    var self = this;
+    var el = this.el;
     var scope = this._scope || this.vm;
 
     this.handler = function(ev) {
       // @NOTE: IE 5.0+
       // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
-      if (!self.el.contains(ev.target)) {
+      if (!el.contains(ev.target)) {
         scope.$event = ev;
         var res = handler(ev);
         scope.$event = null;
