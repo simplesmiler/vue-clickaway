@@ -5,14 +5,14 @@
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
     "transform": [
-      "envify"
+      "loose-envify"
     ]
   },
   "bugs": {
     "url": "https://github.com/simplesmiler/vue-clickaway/issues"
   },
   "dependencies": {
-    "envify": "^3.4.0",
+    "loose-envify": "^1.2.0",
     "vue": "^1.0.0"
   },
   "devDependencies": {
