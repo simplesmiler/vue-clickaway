@@ -12,8 +12,7 @@
     "url": "https://github.com/simplesmiler/vue-clickaway/issues"
   },
   "dependencies": {
-    "loose-envify": "^1.2.0",
-    "vue": "^1.0.0"
+    "loose-envify": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^1.10.3",
@@ -33,6 +32,9 @@
   ],
   "license": "MIT",
   "main": "dist/vue-clickaway.common.js",
+  "peerDependencies": {
+    "vue": "^1.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/simplesmiler/vue-clickaway"
