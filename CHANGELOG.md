@@ -1,3 +1,11 @@
+## [1.1.2] - 2016-08-14
+
+### Fixed
+- Moved `vue` from `dependencies` to `peerDependencies`
+
+### Changed
+- Moved from `envify` to `loose-envify`
+
 ## [1.1.1] - 2015-12-17
 
 ### Fixed
@@ -40,3 +48,4 @@ Initial release
 [1.0.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.0...1.0.1
 [1.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.1...1.1.0
 [1.1.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.0...1.1.1
+[1.1.2]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.1...1.1.2
