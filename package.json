@@ -1,7 +1,7 @@
 {
   "name": "vue-clickaway",
   "description": "Reusable clickaway directive for reusable Vue.js components",
-  "version": "1.1.5",
+  "version": "2.0.0-rc.1",
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
     "transform": [
@@ -33,7 +33,7 @@
   "license": "MIT",
   "main": "dist/vue-clickaway.common.js",
   "peerDependencies": {
-    "vue": "^1.0.0"
+    "vue": "^2.0.0-rc.1"
   },
   "repository": {
     "type": "git",

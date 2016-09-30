@@ -9,11 +9,13 @@
 Sometimes you need to detect clicks **outside** of the element (to close a modal
 window or hide a dropdown select). There is no native event for that, and Vue.js
 does not cover you either. This is why `vue-clickaway` exists. Please check out
-the [demo](https://jsfiddle.net/simplesmiler/bbbh5bt6/) before reading further.
+the [demo](https://jsfiddle.net/simplesmiler/4w1cs8u3/) before reading further.
 
 ## Requirements
 
-- vue: ^1.0.0
+- vue: ^2.0.0-rc.1
+
+If you need a version for Vue 1, try `vue-clickaway@1.0`.
 
 ## Install
 
@@ -26,9 +28,9 @@ $ npm install vue-clickaway --save
 From CDN:
 
 ``` html
-<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/1.1.5/dist/vue-clickaway.js"></script>
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0-rc.1/dist/vue-clickaway.js"></script>
 <!-- OR -->
-<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/1.1.5/dist/vue-clickaway.min.js"></script>
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0-rc.1/dist/vue-clickaway.min.js"></script>
 ```
 
 ## Usage
@@ -71,25 +73,12 @@ export default {
 };
 ```
 
-## Notes
-
-1. `require('vue-clickaway/mixin')` was the recommended syntax prior to `1.1.0`.
-   Although this syntax is still supported, it is recommended to use `import`
-   syntax for es6 and `require('vue-clickaway').mixin` for common-js.
-2. A version for `vue@^0.12.9` is not supported, but is availabale as
-   `vue-clickaway@0.1`.
-
 ## Caveats
 
 1. Pay attention to the letter case. `onClickaway` turns into `v-on-clickaway`,
    while `onClickAway` turns into `v-on-click-away`.
-2. Prior to `vue@1.0` views were able to inherit assets from the parent views,
-   which made it possible to define the directive on the root view
-   and have it available across the whole view hierarchy.
-   Since `vue@1.0` this is not possible. If you still want to define the directive
-   application-wide, you should `Vue.directive('on-clickaway', onClickaway);`
-   in your application entry point. But bear in mind that this introduces
-   implicit dependency for your components, making them less reusable.
+2. Prior to `vue@^2.0`, directive were able to accept statements.
+   This is no longer the case.
 
 ## License
 

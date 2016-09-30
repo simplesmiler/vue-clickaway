@@ -1,3 +1,10 @@
+## [2.0.0-rc.1] - 2016-09-30
+
+Reworked for Vue 2.0
+
+### Breaking changes
+- `v-on-clickaway` used to be able to accept statements, like `v-on-clickaway="a = a + 1"` or `v-on-clickaway="doSomething(context)"`. This is no longer supported.
+
 ## [1.1.5] - 2016-09-30
 
 Skipped 1.1.4 due to publising mistake
@@ -64,3 +71,5 @@ Initial release
 [1.1.2]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.1...1.1.2
 [1.1.3]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.2...1.1.3
 [1.1.5]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.3...1.1.5
+
+[2.0.0]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.5...2.0.0
