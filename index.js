@@ -1,4 +1,11 @@
-import { util } from 'vue';
+import Vue from 'vue';
+
+export var version = '1.1.3';
+
+var compatible = (/^1\./).test(Vue.version);
+if (!compatible) {
+  Vue.util.warn('VueClickaway ' + version + ' only supports Vue 1.x, and does not support Vue ' + Vue.version);
+}
 
 export var directive = {
 
@@ -8,7 +15,7 @@ export var directive = {
   update: function(handler) {
     if (typeof handler !== 'function') {
       if (process.env.NODE_ENV !== 'production') {
-        util.warn(
+        Vue.util.warn(
           this.name + '="' +
           this.expression + '" expects a function value, ' +
           'got ' + handler
@@ -33,11 +40,11 @@ export var directive = {
       }
     };
 
-    util.on(document.documentElement, 'click', this.handler);
+    Vue.util.on(document.documentElement, 'click', this.handler);
   },
 
   reset: function() {
-    util.off(document.documentElement, 'click', this.handler);
+    Vue.util.off(document.documentElement, 'click', this.handler);
   },
 
   unbind: function() {
