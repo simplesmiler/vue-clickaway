@@ -2,7 +2,7 @@
 
   Vue = 'default' in Vue ? Vue['default'] : Vue;
 
-  var version = '1.1.4';
+  var version = '1.1.5';
 
   var compatible = (/^1\./).test(Vue.version);
   if (!compatible) {
