@@ -1,6 +1,14 @@
 'use strict';
 
-var vue = require('vue');
+var Vue = require('vue');
+Vue = 'default' in Vue ? Vue['default'] : Vue;
+
+var version = '1.1.4';
+
+var compatible = (/^1\./).test(Vue.version);
+if (!compatible) {
+  Vue.util.warn('VueClickaway ' + version + ' only supports Vue 1.x, and does not support Vue ' + Vue.version);
+}
 
 var directive = {
 
@@ -10,7 +18,7 @@ var directive = {
   update: function(handler) {
     if (typeof handler !== 'function') {
       if (process.env.NODE_ENV !== 'production') {
-        vue.util.warn(
+        Vue.util.warn(
           this.name + '="' +
           this.expression + '" expects a function value, ' +
           'got ' + handler
@@ -35,11 +43,11 @@ var directive = {
       }
     };
 
-    vue.util.on(document.documentElement, 'click', this.handler);
+    Vue.util.on(document.documentElement, 'click', this.handler);
   },
 
   reset: function() {
-    vue.util.off(document.documentElement, 'click', this.handler);
+    Vue.util.off(document.documentElement, 'click', this.handler);
   },
 
   unbind: function() {
@@ -52,5 +60,6 @@ var mixin = {
   directives: { onClickaway: directive },
 };
 
+exports.version = version;
 exports.directive = directive;
 exports.mixin = mixin;

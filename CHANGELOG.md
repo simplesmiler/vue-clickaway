@@ -1,3 +1,8 @@
+## [1.1.4] - 2016-09-30
+
+### Changed
+- Exposed version
+
 ## [1.1.3] - 2016-08-14
 
 ### Fixed
@@ -55,3 +60,5 @@ Initial release
 [1.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/1.0.1...1.1.0
 [1.1.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.0...1.1.1
 [1.1.2]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.1...1.1.2
+[1.1.3]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.2...1.1.3
+[1.1.4]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.3...1.1.4
