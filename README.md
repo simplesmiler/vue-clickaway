@@ -13,7 +13,7 @@ the [demo](https://jsfiddle.net/simplesmiler/4w1cs8u3/) before reading further.
 
 ## Requirements
 
-- vue: ^2.0.0-rc.1
+- vue: ^2.0.0
 
 If you need a version for Vue 1, try `vue-clickaway@1.0`.
 

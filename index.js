@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-export var version = '2.0.0-rc.1';
+export var version = '2.0.0';
 
 var compatible = (/^2\./).test(Vue.version);
 if (!compatible) {

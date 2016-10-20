@@ -1,3 +1,8 @@
+## [2.0.0] - 2016-10-20
+
+### Breaking changes
+- Removed deprecated submodules
+
 ## [2.0.0-rc.1] - 2016-09-30
 
 Reworked for Vue 2.0
@@ -72,4 +77,5 @@ Initial release
 [1.1.3]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.2...1.1.3
 [1.1.5]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.3...1.1.5
 
-[2.0.0]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.5...2.0.0
+[2.0.0-rc.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.5...2.0.0-rc.1
+[2.0.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0-rc.1...2.0.0

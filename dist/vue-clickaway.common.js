@@ -3,7 +3,7 @@
 var Vue = require('vue');
 Vue = 'default' in Vue ? Vue['default'] : Vue;
 
-var version = '2.0.0-rc.1';
+var version = '2.0.0';
 
 var compatible = (/^2\./).test(Vue.version);
 if (!compatible) {
