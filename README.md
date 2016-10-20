@@ -28,9 +28,9 @@ $ npm install vue-clickaway --save
 From CDN:
 
 ``` html
-<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0-rc.1/dist/vue-clickaway.js"></script>
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0/dist/vue-clickaway.js"></script>
 <!-- OR -->
-<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0-rc.1/dist/vue-clickaway.min.js"></script>
+<script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.0.0/dist/vue-clickaway.min.js"></script>
 ```
 
 ## Usage
