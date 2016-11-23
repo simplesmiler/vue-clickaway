@@ -1,3 +1,8 @@
+## [2.1.0] - 2016-11-24
+
+### Changed
+- Away callback may not be triggered until the end of the initial macrotask (fixes #8)
+
 ## [2.0.0] - 2016-10-20
 
 ### Breaking changes
@@ -79,3 +84,4 @@ Initial release
 
 [2.0.0-rc.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.5...2.0.0-rc.1
 [2.0.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0-rc.1...2.0.0
+[2.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0...2.1.0
