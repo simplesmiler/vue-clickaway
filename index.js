@@ -1,13 +1,49 @@
 import Vue from 'vue';
 
-export var version = '2.1.0';
+export var version = '2.1.1';
 
 var compatible = (/^2\./).test(Vue.version);
 if (!compatible) {
   Vue.util.warn('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
 }
 
+// @REFERENCE https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+if (!Array.prototype.indexOf) {
 
+  Array.prototype.indexOf = function(vMember, nStartFrom) {
+
+    if (this == null) {
+      Vue.util.warn("Array.prototype.indexOf() - can't convert `" + this + "` to object");
+    }
+
+    var nIdx = isFinite(nStartFrom) ? Math.floor(nStartFrom) : 0,
+      oThis = this instanceof Object ? this : new Object(this),
+      nLen = isFinite(oThis.length) ? Math.floor(oThis.length) : 0;
+
+    if (nIdx >= nLen) {
+      return -1;
+    }
+
+    if (nIdx < 0) {
+      nIdx = Math.max(nLen + nIdx, 0);
+    }
+
+    if (vMember === undefined) {
+      do {
+        if (nIdx in oThis && oThis[nIdx] === undefined) {
+          return nIdx;
+        }
+      } while (++nIdx < nLen);
+    } else {
+      do {
+        if (oThis[nIdx] === vMember) {
+          return nIdx;
+        }
+      } while (++nIdx < nLen);
+    }
+    return -1;
+  };
+}
 
 // @SECTION: implementation
 
@@ -42,8 +78,7 @@ function bind(el, binding) {
 
   el[HANDLER] = function(ev) {
     // @NOTE: IE 5.0+
-    // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
-    if (initialMacrotaskEnded && !el.contains(ev.target)) {
+    if (initialMacrotaskEnded && ev.path.indexOf(el) < 0) {
       return callback(ev);
     }
   };
