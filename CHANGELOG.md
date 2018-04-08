@@ -1,3 +1,8 @@
+## [2.2.1] - 2018-04-08
+
+### Changed
+- Fix regression, fallback to `.contains` if `.path` is not supported
+
 ## [2.2.0] - 2018-04-08
 
 ### Changed
@@ -90,3 +95,5 @@ Initial release
 [2.0.0-rc.1]: https://github.com/simplesmiler/vue-clickaway/compare/1.1.5...2.0.0-rc.1
 [2.0.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0-rc.1...2.0.0
 [2.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0...2.1.0
+[2.2.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.2.0...2.1.0
+[2.2.1]: https://github.com/simplesmiler/vue-clickaway/compare/2.2.0...2.2.1
