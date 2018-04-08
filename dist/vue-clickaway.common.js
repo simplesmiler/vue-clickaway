@@ -3,7 +3,7 @@
 var Vue = require('vue');
 Vue = 'default' in Vue ? Vue['default'] : Vue;
 
-var version = '2.1.0';
+var version = '2.2.0';
 
 var compatible = (/^2\./).test(Vue.version);
 if (!compatible) {
@@ -44,9 +44,11 @@ function bind(el, binding) {
   }, 0);
 
   el[HANDLER] = function(ev) {
-    // @NOTE: IE 5.0+
-    // @REFERENCE: https://developer.mozilla.org/en/docs/Web/API/Node/contains
-    if (initialMacrotaskEnded && !el.contains(ev.target)) {
+    // @NOTE: this test used to be `el.containts`, but `ev.path` is better,
+    //        because it tests whether the element was there at the time of
+    //        the click, not whether it is there now, that the event has arrived
+    //        to the top.
+    if (initialMacrotaskEnded && ev.path.indexOf(el) < 0) {
       return callback(ev);
     }
   };

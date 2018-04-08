@@ -1,3 +1,8 @@
+## [2.2.0] - 2018-04-08
+
+### Changed
+- Refer to `event.path` instead of `element.contains(event.target)` for more reliable containment check (fixes #23), kudos to @jonobr1
+
 ## [2.1.0] - 2016-11-24
 
 ### Changed
