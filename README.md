@@ -26,9 +26,11 @@ From npm:
 $ npm install vue-clickaway --save
 ```
 
-From CDN (minified):
+From CDN, chose the one you prefer:
+
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue-clickaway@2.2.0/dist/vue-clickaway.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-clickaway/2.1.0/vue-clickaway.min.js"></script>
 <script src="https://cdn.rawgit.com/simplesmiler/vue-clickaway/2.2.0/dist/vue-clickaway.min.js"></script>
 ```
 
