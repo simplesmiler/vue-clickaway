@@ -1,3 +1,8 @@
+## [2.2.0] - 2018-04-08
+
+### Changed
+- Refer to `event.path` instead of `element.contains(event.target)` for more reliable containment check (fixes #23), kudos to @jonobr1
+
 ## [2.1.0] - 2016-11-24
 
 ### Changed
@@ -17,7 +22,7 @@ Reworked for Vue 2.0
 
 ## [1.1.5] - 2016-09-30
 
-Skipped 1.1.4 due to publising mistake
+Skipped 1.1.4 due to publishing mistake
 
 ### Changed
 - Exposed version
