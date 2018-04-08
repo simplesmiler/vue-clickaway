@@ -17,7 +17,7 @@ Reworked for Vue 2.0
 
 ## [1.1.5] - 2016-09-30
 
-Skipped 1.1.4 due to publising mistake
+Skipped 1.1.4 due to publishing mistake
 
 ### Changed
 - Exposed version
