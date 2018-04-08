@@ -3,6 +3,7 @@
 > Reusable clickaway directive for reusable [Vue.js](https://github.com/vuejs/vue) components
 
 [![npm version](https://img.shields.io/npm/v/vue-clickaway.svg)](https://www.npmjs.com/package/vue-clickaway)
+[![CDNJS](https://img.shields.io/cdnjs/v/vue-clickaway.svg)](https://cdnjs.com/libraries/vue-clickaway)
 
 ## Overview
 
