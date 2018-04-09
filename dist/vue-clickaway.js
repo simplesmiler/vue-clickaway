@@ -2,7 +2,7 @@
 
   Vue = 'default' in Vue ? Vue['default'] : Vue;
 
-  var version = '2.2.1';
+  var version = '2.2.2';
 
   var compatible = (/^2\./).test(Vue.version);
   if (!compatible) {
@@ -15,8 +15,10 @@
 
   var HANDLER = '_vue_clickaway_handler';
 
-  function bind(el, binding) {
+  function bind(el, binding, vnode) {
     unbind(el);
+
+    var vm = vnode.context;
 
     var callback = binding.value;
     if (typeof callback !== 'function') {
@@ -50,7 +52,7 @@
       // @NOTE: `.path` is non-standard, the standard way is `.composedPath()`
       var path = ev.path || (ev.composedPath ? ev.composedPath() : undefined);
       if (initialMacrotaskEnded && (path ? path.indexOf(el) < 0 : !el.contains(ev.target))) {
-        return callback(ev);
+        return callback.call(vm, ev);
       }
     };
 

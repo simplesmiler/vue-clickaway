@@ -1,3 +1,8 @@
+## [2.2.2] - 2018-04-09
+
+### Changed
+- Fix context with which the away handler is called
+
 ## [2.2.1] - 2018-04-08
 
 ### Changed
@@ -97,3 +102,4 @@ Initial release
 [2.1.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.0.0...2.1.0
 [2.2.0]: https://github.com/simplesmiler/vue-clickaway/compare/2.2.0...2.1.0
 [2.2.1]: https://github.com/simplesmiler/vue-clickaway/compare/2.2.0...2.2.1
+[2.2.2]: https://github.com/simplesmiler/vue-clickaway/compare/2.2.1...2.2.2
