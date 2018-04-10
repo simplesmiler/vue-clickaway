@@ -15,11 +15,17 @@
     "loose-envify": "^1.2.0"
   },
   "devDependencies": {
+    "@vue/server-test-utils": "^1.0.0-beta.13",
+    "@vue/test-utils": "^1.0.0-beta.13",
     "eslint": "^1.10.3",
+    "jest": "^22.4.3",
     "mkdirp": "^0.5.1",
     "rollup": "^0.21.2",
     "rollup-plugin-replace": "^1.1.0",
-    "uglify-js": "^2.6.1"
+    "uglify-js": "^2.6.1",
+    "vue": "^2.5.16",
+    "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
   },
   "homepage": "https://github.com/simplesmiler/vue-clickaway",
   "keywords": [
@@ -33,7 +39,9 @@
   "license": "MIT",
   "main": "dist/vue-clickaway.common.js",
   "peerDependencies": {
-    "vue": "^2.0.0"
+    "vue": "^2.0.0",
+    "vue-template-compiler": "^2.x",
+    "vue-server-renderer": "^2.x"
   },
   "repository": {
     "type": "git",
@@ -41,6 +49,6 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   }
 }
