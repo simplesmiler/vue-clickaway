@@ -12,11 +12,14 @@
     "url": "https://github.com/simplesmiler/vue-clickaway/issues"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "loose-envify": "^1.2.0"
   },
   "devDependencies": {
     "@vue/server-test-utils": "^1.0.0-beta.13",
     "@vue/test-utils": "^1.0.0-beta.13",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^1.10.3",
     "jest": "^22.4.3",
     "mkdirp": "^0.5.1",
