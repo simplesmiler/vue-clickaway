@@ -46,7 +46,7 @@ function bind(el, binding, vnode) {
   }, 0);
 
   el[HANDLER] = function(ev) {
-    // @NOTE: this test used to be just `el.containts`, but working with path is better,
+    // @NOTE: this test used to be just `el.contains`, but working with path is better,
     //        because it tests whether the element was there at the time of
     //        the click, not whether it is there now, that the event has arrived
     //        to the top.
@@ -67,9 +67,9 @@ function unbind(el) {
 
 var directive = {
   bind: bind,
-  update: function(el, binding) {
+  update: function(el, binding, vnode) {
     if (binding.value === binding.oldValue) return;
-    bind(el, binding);
+    bind(el, binding, vnode);
   },
   unbind: unbind,
 };
