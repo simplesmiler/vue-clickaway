@@ -16,11 +16,12 @@
   var HANDLER = '_vue_clickaway_handler';
 
   function bind(el, binding, vnode) {
-    unbind(el);
+    unbind(el, binding);
 
     var vm = vnode.context;
 
     var callback = binding.value;
+    var modifiers = binding.modifiers
     if (typeof callback !== 'function') {
       if ('development' !== 'production') {
         Vue.util.warn(
@@ -45,7 +46,7 @@
     }, 0);
 
     el[HANDLER] = function(ev) {
-      // @NOTE: this test used to be just `el.contains`, but working with path is better,
+      // @NOTE: this test used to be just `el.containts`, but working with path is better,
       //        because it tests whether the element was there at the time of
       //        the click, not whether it is there now, that the event has arrived
       //        to the top.
@@ -56,11 +57,12 @@
       }
     };
 
-    document.documentElement.addEventListener('click', el[HANDLER], false);
+    document.documentElement.addEventListener('click', el[HANDLER], modifiers.capture);
   }
 
-  function unbind(el) {
-    document.documentElement.removeEventListener('click', el[HANDLER], false);
+  function unbind(el, binding) {
+    var modifiers = binding.modifiers
+    document.documentElement.removeEventListener('click', el[HANDLER], modifiers.capture);
     delete el[HANDLER];
   }
 

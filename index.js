@@ -14,11 +14,12 @@ if (!compatible) {
 var HANDLER = '_vue_clickaway_handler';
 
 function bind(el, binding, vnode) {
-  unbind(el);
+  unbind(el, binding);
 
   var vm = vnode.context;
 
   var callback = binding.value;
+  var modifiers = binding.modifiers
   if (typeof callback !== 'function') {
     if (process.env.NODE_ENV !== 'production') {
       Vue.util.warn(
@@ -54,11 +55,12 @@ function bind(el, binding, vnode) {
     }
   };
 
-  document.documentElement.addEventListener('click', el[HANDLER], false);
+  document.documentElement.addEventListener('click', el[HANDLER], modifiers.capture);
 }
 
-function unbind(el) {
-  document.documentElement.removeEventListener('click', el[HANDLER], false);
+function unbind(el, binding) {
+  var modifiers = binding.modifiers
+  document.documentElement.removeEventListener('click', el[HANDLER], modifiers.capture);
   delete el[HANDLER];
 }
 

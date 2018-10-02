@@ -40,6 +40,7 @@
     "url": "https://github.com/simplesmiler/vue-clickaway"
   },
   "scripts": {
+    "build": "node build.js",
     "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
