@@ -54,11 +54,11 @@ function bind(el, binding, vnode) {
     }
   };
 
-  document.documentElement.addEventListener('click', el[HANDLER], false);
+  document.documentElement.addEventListener(('ontouchstart' in document.documentElement ? "touchstart" : "click"), el[HANDLER], false);
 }
 
 function unbind(el) {
-  document.documentElement.removeEventListener('click', el[HANDLER], false);
+  document.documentElement.removeEventListener(('ontouchstart' in document.documentElement ? "touchstart" : "click"), el[HANDLER], false);
   delete el[HANDLER];
 }
 
