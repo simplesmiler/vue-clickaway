@@ -72,9 +72,9 @@ function unbind(el, binding) {
 
 var directive = {
   bind: bind,
-  update: function(el, binding) {
+  update: function(el, binding, vnode, oldVnode) {
     if (binding.value === binding.oldValue) return;
-    bind(el, binding);
+    bind(el, binding, vnode);
   },
   unbind: unbind,
 };
