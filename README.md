@@ -86,7 +86,7 @@ export default {
    by attaching the DOM element directly to the body. This makes clicks on
    a dropped element trigger away handler. To combat that, you have to add
    an extra check in the handler, for where the event originated from.
-   See #9 for an example.
+   See [#9](https://github.com/simplesmiler/vue-clickaway/issues/9) for an example.
 
 ## License
 
