@@ -52,7 +52,7 @@ function bind(el, binding, vnode) {
     //        to the top.
     // @NOTE: `.path` is non-standard, the standard way is `.composedPath()`
     var path = ev.path || (ev.composedPath ? ev.composedPath() : undefined);
-    if (initialMacrotaskEnded && (path ? path.indexOf(el) < 0 : !el.contains(ev.target))) {
+    if (initialMacrotaskEnded && (path ? Array.from(path).indexOf(el) < 0 : !el.contains(ev.target))) {
       return callback.call(vm, ev);
     }
   };
