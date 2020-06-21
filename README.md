@@ -26,7 +26,7 @@ From npm:
 $ npm install vue-clickaway --save
 ```
 
-From CDN, chose the one you prefer:
+From CDN, choose the one you prefer:
 
 ``` html
 <script src="https://cdn.jsdelivr.net/npm/vue-clickaway@2.2.2/dist/vue-clickaway.min.js"></script>
@@ -82,7 +82,7 @@ export default {
    This is no longer the case. If you need to pass arguments, just do
    `v-on-clickaway="() => away(arg1)"`.
 3. There is a common issue with dropdowns (and modals) inside an element with
-   `v-on-clickaway`. Some UI libraries chose to implement these UI elements
+   `v-on-clickaway`. Some UI libraries choose to implement these UI elements
    by attaching the DOM element directly to the body. This makes clicks on
    a dropped element trigger away handler. To combat that, you have to add
    an extra check in the handler, for where the event originated from.
