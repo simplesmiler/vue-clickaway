@@ -5,9 +5,9 @@ Vue = 'default' in Vue ? Vue['default'] : Vue;
 
 var version = '2.2.2';
 
-var compatible = (/^2\./).test(Vue.version);
+var compatible = (/^3\./).test(Vue.version);
 if (!compatible) {
-  Vue.util.warn('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
+  console.error('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
 }
 
 
@@ -24,7 +24,7 @@ function bind(el, binding, vnode) {
   var callback = binding.value;
   if (typeof callback !== 'function') {
     if (process.env.NODE_ENV !== 'production') {
-      Vue.util.warn(
+      console.error(
         'v-' + binding.name + '="' +
         binding.expression + '" expects a function value, ' +
         'got ' + callback
@@ -66,12 +66,12 @@ function unbind(el) {
 }
 
 var directive = {
-  bind: bind,
-  update: function(el, binding) {
+  beforeMount: bind,
+  updated: function(el, binding) {
     if (binding.value === binding.oldValue) return;
     bind(el, binding);
   },
-  unbind: unbind,
+  unmounted: unbind,
 };
 
 var mixin = {
