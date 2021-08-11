@@ -33,7 +33,7 @@
   "license": "MIT",
   "main": "dist/vue-clickaway.common.js",
   "peerDependencies": {
-    "vue": "^2.0.0"
+    "vue": "^3.2.1"
   },
   "repository": {
     "type": "git",
