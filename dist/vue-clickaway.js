@@ -6,7 +6,7 @@
 
   var compatible = (/^3\./).test(Vue.version);
   if (!compatible) {
-    console.error('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
+    console.error('VueClickaway ' + version + ' only supports Vue 3.x, and does not support Vue ' + Vue.version);
   }
 
 

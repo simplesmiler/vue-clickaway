@@ -1,7 +1,7 @@
 {
   "name": "vue-clickaway",
   "description": "Reusable clickaway directive for reusable Vue.js components",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "author": "Denis Karabaza <denis.karabaza@gmail.com>",
   "browserify": {
     "transform": [
@@ -41,6 +41,7 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js"
   }
 }
