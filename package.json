@@ -42,6 +42,6 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint index.js directive.js mixin.js build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js"
+    "_build": "node build.js"
   }
 }
